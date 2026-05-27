@@ -175,68 +175,47 @@
 
 <script>
 
-fetch('./diem.csv')
+fetch('./diem.json')
 
-.then(response => response.text())
+.then(response => response.json())
 
 .then(data => {
 
-    const rows = data.trim().split('\n');
+  const list = document.getElementById('list');
 
-    const list = document.getElementById('list');
+  data.forEach(item => {
 
-    for(let i = 1; i < rows.length; i++){
+    list.innerHTML += `
 
-        const cols = rows[i].split(',');
+    <div class="card">
 
-        const stt = cols[0] || "";
-        const vitri = cols[1] || "";
-        const thoigian = cols[2] || "";
-        const sdt = cols[3] || "";
-        const phutrach = cols[4] || "";
-        const map = cols[5] || "";
+      <h2>📍 ${item.stt}. ${item.vitri}</h2>
 
-        list.innerHTML += `
+      <div class="info">
+        ⏰ <b>Thời gian:</b> ${item.thoigian}
+      </div>
 
-        <div class="card">
+      <div class="info phone">
+        📞 <b>SĐT:</b> ${item.sdt}
+      </div>
 
-          <h2>📍 ${stt}. ${vitri}</h2>
+      <div class="info">
+        👨‍🏫 <b>Phụ trách:</b> ${item.phutrach}
+      </div>
 
-          <div class="info">
-            ⏰ <b>Thời gian:</b> ${thoigian}
-          </div>
+      <div class="button-group">
 
-          <div class="info phone">
-            📞 <b>SĐT:</b> ${sdt}
-          </div>
+        <a class="btn call-btn" href="tel:${item.sdt}">
+          📞 Gọi điện
+        </a>
 
-          <div class="info">
-            👨‍🏫 <b>Phụ trách:</b> ${phutrach}
-          </div>
+      </div>
 
-          <div class="button-group">
+    </div>
 
-            <a class="btn call-btn" href="tel:${sdt}">
-              📞 Gọi điện
-            </a>
+    `;
+  });
 
-            ${map ? `
-            <a class="btn map-btn" href="${map}" target="_blank">
-              🗺️ Chỉ đường
-            </a>
-            ` : ""}
-
-          </div>
-
-        </div>
-
-        `;
-    }
-
-})
-
-.catch(error => {
-    console.log(error);
 });
 
 </script>
