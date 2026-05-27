@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Điểm sinh hoạt hè thiếu nhi</title>
 
@@ -39,6 +41,25 @@
       margin-bottom:40px;
 
       text-shadow:2px 2px 10px rgba(0,0,0,0.4);
+    }
+
+    #search{
+      width:100%;
+      max-width:700px;
+
+      display:block;
+
+      margin:0 auto 30px auto;
+
+      padding:15px;
+
+      border:none;
+
+      border-radius:15px;
+
+      font-size:18px;
+
+      outline:none;
     }
 
     #list{
@@ -80,6 +101,8 @@
       color:#333;
 
       line-height:1.6;
+
+      white-space:pre-line;
     }
 
     .phone{
@@ -139,6 +162,12 @@
       text-shadow:1px 1px 5px rgba(0,0,0,0.5);
     }
 
+    .loading{
+      text-align:center;
+      color:white;
+      font-size:22px;
+    }
+
     @media(max-width:768px){
 
       h1{
@@ -165,60 +194,140 @@
 
 <body>
 
-<h1>🌞🌈 Điểm sinh hoạt hè thiếu nhi 🎈🎉</h1>
+  <h1>🌞🌈 Điểm sinh hoạt hè thiếu nhi 🎈🎉</h1>
 
-<div id="list"></div>
+  <input
+    type="text"
+    id="search"
+    placeholder="🔍 Tìm kiếm địa điểm..."
+  />
 
-<div class="footer">
-  ☀️ Chúc các em có một mùa hè thật vui vẻ ☀️
-</div>
+  <div id="list">
+    <div class="loading">Đang tải dữ liệu...</div>
+  </div>
 
-<script>
+  <div class="footer">
+    ☀️ Chúc các em có một mùa hè thật vui vẻ ☀️
+  </div>
 
-fetch('./diem.json')
+  <script>
 
-.then(response => response.json())
+    // THAY LINK RAW GITHUB Ở ĐÂY
+    const JSON_URL =
+      "https://raw.githubusercontent.com/Ngiau1904/SinhHoatHe/main/diem.json";
 
-.then(data => {
+    let allData = [];
 
-  const list = document.getElementById('list');
+    function renderData(data){
 
-  data.forEach(item => {
+      const list = document.getElementById('list');
 
-    list.innerHTML += `
+      if(data.length === 0){
+        list.innerHTML = `
+          <div class="card">
+            Không tìm thấy dữ liệu
+          </div>
+        `;
+        return;
+      }
 
-    <div class="card">
+      list.innerHTML = "";
 
-      <h2>📍 ${item.stt}. ${item.vitri}</h2>
+      data.forEach(item => {
 
-      <div class="info">
-        ⏰ <b>Thời gian:</b> ${item.thoigian}
-      </div>
+        list.innerHTML += `
 
-      <div class="info phone">
-        📞 <b>SĐT:</b> ${item.sdt}
-      </div>
+        <div class="card">
 
-      <div class="info">
-        👨‍🏫 <b>Phụ trách:</b> ${item.phutrach}
-      </div>
+          <h2>📍 ${item.STT}. ${item.ViTri}</h2>
 
-      <div class="button-group">
+          <div class="info">
+            ⏰ <b>Thời gian:</b>
+            ${item.ThoiGian}
+          </div>
 
-        <a class="btn call-btn" href="tel:${item.sdt}">
-          📞 Gọi điện
-        </a>
+          <div class="info phone">
+            📞 <b>SĐT:</b>
+            ${item.Sdt}
+          </div>
 
-      </div>
+          <div class="info">
+            👨‍🏫 <b>Phụ trách:</b>
+            ${item.PhuTrach}
+          </div>
 
-    </div>
+          <div class="button-group">
 
-    `;
-  });
+            <a
+              class="btn call-btn"
+              href="tel:${item.Sdt}"
+            >
+              📞 Gọi điện
+            </a>
 
-});
+            <a
+              class="btn map-btn"
+              target="_blank"
+              href="https://www.google.com/maps/search/${encodeURIComponent(item.ViTri)}"
+            >
+              📍 Chỉ đường
+            </a>
 
-</script>
+          </div>
+
+        </div>
+
+        `;
+
+      });
+
+    }
+
+    fetch(JSON_URL)
+
+      .then(response => response.json())
+
+      .then(data => {
+
+        allData = data;
+
+        renderData(allData);
+
+      })
+
+      .catch(error => {
+
+        document.getElementById('list').innerHTML = `
+          <div class="card">
+            ❌ Không tải được dữ liệu JSON
+          </div>
+        `;
+
+        console.error(error);
+
+      });
+
+    // Tìm kiếm
+    document.getElementById('search')
+      .addEventListener('input', function(){
+
+      const keyword = this.value.toLowerCase();
+
+      const filtered = allData.filter(item => {
+
+        return (
+          item.ViTri.toLowerCase().includes(keyword)
+        );
+
+      });
+
+      renderData(filtered);
+
+    });
+
+  </script>
 
 </body>
+
 </html>
+```
