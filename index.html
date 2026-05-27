@@ -72,14 +72,14 @@ fetch('diem.csv')
 
         const cols = row.split(',');
 
-        if(cols.length < 6) return;
+        if(cols.length < 5) return;
 
         const stt = cols[0];
         const vitri = cols[1];
         const thoigian = cols[2];
         const sdt = cols[3];
         const phutrach = cols[4];
-        const map = cols[5];
+        const map = cols[5] || "#";
 
         list.innerHTML += `
         
@@ -92,11 +92,11 @@ fetch('diem.csv')
             <p><b>📞 SĐT:</b> ${sdt}</p>
 
             <p><b>👨‍🏫 Phụ trách:</b> ${phutrach}</p>
-
-            <a href="${map}" target="_blank">
-              <button>🗺️ Chỉ đường</button>
-            </a>
-
+            ${map !== "#" ? `
+  <a href="${map}" target="_blank">
+  <button>🗺️ Chỉ đường</button>
+</a>
+` : ""}
         </div>
         
         `;
