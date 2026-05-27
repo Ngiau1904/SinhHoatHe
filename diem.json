@@ -90,13 +90,21 @@
   {
     "STT": 12,
     "ViTri": "Chung cư The Easter City 6B",
-    "ThoiGian": "Thứ Tư hàng tuần\nVào lúc 17 giờ - 18 giờ 30",
+    "ThoiGian": "Thứ Tư hàng tuần\nVào lúc 17 giờ 00 - 18 giờ 30",
     "Sdt": "0398590274",
-    "PhuTrach": "1. Chị Nguyễn Ngọc Quế Trâm - Bí thư Chi đoàn ấp 45\n2. Phan Thị Bích Trâm- Bí thư Chi đoàn Trường Mầm non Thủy Tiên 2\n3. Nguyễn Thị Kiều Oanh- Đoàn viên chi đoàn Trường Mầm non Thuỷ Tiên 2\n4. Võ Thị Thuý Hằng- Đoàn viên chi đoàn Trường Mầm non Thuỷ Tiên 2\n5. Nguyễn Thị Thanh Thuỷ- Uỷ viên Trường Mầm non Thuỷ Tiên 2",
+    "PhuTrach": "1. Chị Nguyễn Ngọc Quế Trâm - Bí thư Chi đoàn ấp 45\n2. Anh Nguyễn Đức Vinh – Chủ nhiệm CLB Sinh viên",
     "LinkMap": ""
   },
   {
     "STT": 13,
+    "ViTri": "Quảng trường Bến thuyền Mizuki, ấp 25",
+    "ThoiGian": "Chủ nhật hàng tuần\nVào lúc 17 giờ 00 - 18 giờ 30",
+    "Sdt": "0398590274",
+    "PhuTrach": "1. Chị Trần Thị Kim Thoa – Bí thư Chi đoàn ấp 25\n2. Phan Thị Bích Trâm- Bí thư Chi đoàn Trường Mầm non Thủy Tiên 2\n3. Nguyễn Thị Kiều Oanh- Đoàn viên chi đoàn Trường Mầm non Thuỷ Tiên 2\n4. Võ Thị Thuý Hằng- Đoàn viên chi đoàn Trường Mầm non Thuỷ Tiên 2\n5. Nguyễn Thị Thanh Thuỷ- Uỷ viên Trường Mầm non Thuỷ Tiên 2",
+    "LinkMap": ""
+  },
+  {
+    "STT": 14,
     "ViTri": "Đình An Phú",
     "ThoiGian": "Thứ Ba – Thứ Tư hàng tuần\nVào lúc 16 giờ 00 đến 17 giờ 30",
     "Sdt": "0387979953",
@@ -104,7 +112,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 14,
+    "STT": 15,
     "ViTri": "Trường Tiểu học Phong Phú",
     "ThoiGian": "Thứ Ba – Thứ Năm hàng tuần\n Vào lúc 9 giờ 30 đến 11 giờ 00",
     "Sdt": "0968468239",
@@ -112,7 +120,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 15,
+    "STT": 16,
     "ViTri": "Trường Tiểu học Phong Phú 2",
     "ThoiGian": "Thứ Hai – Thứ Tư hàng tuần\n Vào lúc 09 giờ 30 đến 11 giờ 00",
     "Sdt": "0703201476",
@@ -120,7 +128,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 16,
+    "STT": 17,
     "ViTri": "Sảnh Chung cư Lovera Vista",
     "ThoiGian": "Thứ Bảy - Chủ nhật trong tuần\n Vào lúc 16 giờ 00 đến 17 giờ 30",
     "Sdt": "0931755149",
@@ -128,7 +136,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 17,
+    "STT": 18,
     "ViTri": "Văn phòng – Điểm sinh hoạt văn hóa thể thao Ấp 63 – 64 - 65",
     "ThoiGian": "Thứ Tư – Thứ Năm hàng tuần\n Vào lúc 17 giờ 00 đến 18 giờ 30",
     "Sdt": "0768960091",
@@ -136,7 +144,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 18,
+    "STT": 19,
     "ViTri": "Trường THCS Phong Phú",
     "ThoiGian": "Thứ Ba – Thứ Năm hàng tuần\n Vào lúc 8 giờ 30 đến 10 giờ 00",
     "Sdt": "0773070715",
@@ -144,7 +152,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 19,
+    "STT": 20,
     "ViTri": "Khu vui chơi thiếu nhi Gia Hòa",
     "ThoiGian": "Thứ Tư – Thứ Sáu hàng tuần\n Vào lúc 17 giờ 00 đến 18 giờ 30",
     "Sdt": "0703041417",
@@ -152,7 +160,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 20,
+    "STT": 21,
     "ViTri": "Trường Tiểu học Lê Quý Đôn",
     "ThoiGian": "Thứ Hai – Thứ Tư hàng tuần\n Vào lúc 09 giờ 30 đến 11 giờ 00",
     "Sdt": "0772939986",
@@ -160,7 +168,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 21,
+    "STT": 22,
     "ViTri": "Sảnh Chung cư Conic Skyway Block G",
     "ThoiGian": "Thứ Năm – Thứ Sáu hàng tuần\n Vào lúc 17 giờ 00 đến 18 giờ 30",
     "Sdt": "0936357893",
@@ -168,7 +176,7 @@
     "LinkMap": ""
   },
   {
-    "STT": 22,
+    "STT": 23,
     "ViTri": "Sảnh Chung cư Aview",
     "ThoiGian": "Thứ Hai – Thứ Ba hàng tuần\n Vào lúc 17 giờ 00 đến 18 giờ 30",
     "Sdt": "0772498865",
