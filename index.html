@@ -285,6 +285,11 @@
         font-size:15px;
 
       }
+      .phu-trach{
+        
+        line-height:1.5;
+        
+       }
 
     }
 
@@ -380,11 +385,11 @@
 
             </div>
 
-            <div class="info">
+            <div class="info phu-trach">
 
-              👨‍🏫 <b>Phụ trách:</b>
+            👨‍🏫 <b>Phụ trách:</b><br>
 
-              ${item.PhuTrach}
+            ${item.PhuTrach.replace(/\n/g, "<br>")}
 
             </div>
 
