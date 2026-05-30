@@ -189,6 +189,13 @@ h1{
   1px 1px 5px rgba(0,0,0,0.5);
 
 }
+.chu-thich{
+  font-size:13px;
+  color:#666;
+  font-style:italic;
+  margin-top:4px;
+  font-weight:normal;
+}
     
 /* MOBILE */
 
@@ -341,6 +348,11 @@ h1{
             <h2>
 
               📍 ${item.STT}. ${item.ViTri}
+              ${
+                item.ChuThich?.trim()
+                  ? `<div class="chu-thich">${item.ChuThich}</div>`
+                  : ""
+              }
 
             </h2>
 
